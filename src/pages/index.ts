@@ -1,0 +1,5 @@
+export { default as Home } from './Home'
+export { default as Popup } from './Popup'
+export { default as Land } from './Land'
+export { default as Login } from './Login'
+export { default as AllVideos } from './AllVideos'

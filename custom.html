@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        button {
+            margin: 0;
+            padding: 0;
+        }
+
+        .play {
+            height: 0;
+            width: 0;
+            margin-left: calc(2 * 0.14 * var(--button-height));
+            /*margin-left: 17px;*/
+            background: none;
+            border: none;
+            border-top: var(--button-height) solid transparent;
+            border-bottom: var(--button-height) solid transparent;
+            border-left: calc(var(--button-height) * 2 * 0.86) solid var(--button-color);
+
+        }
+
+        .pause {
+            position: relative;
+            background: none;
+            border: none;
+            height: calc(var(--button-height) * 2);
+            width: calc(var(--button-height) * 2 * 0.86);
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 33%;
+                background: var(--button-color);
+            }
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div className="flex justify-center items-center p-2 gap-2 rounded-[200px] bg-[#4B4B4B h-[86px]">
+        <div className="flex flex-col justify-center items-center gap-2 p-3">
+            <div className="flex justify-center items-start gap-6">
+                <div className="flex items-center gap-2">
+                    <div>
+                        <p>00:00:00</p>
+                        <img src="./images/rec.png" className="w-5 h-5 block" alt="rec" />
+                    </div>
+                    <img src="./images/divider.png" alt="divider" className="block" />
+                </div>
+            </div>
+            <div className="flex justify-center items-start gap-6">
+                <div>
+
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const player = document.querySelector('.fake-player');
+
+        function clickHandler() {
+            const buttons = Array.from(this.children);
+            buttons.forEach(button => button.classList.toggle('hidden'))
+        };
+
+        player.addEventListener('click', clickHandler);
+    </script>
+</body>
+
+</html>
