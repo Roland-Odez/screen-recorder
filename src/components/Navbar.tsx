@@ -20,10 +20,10 @@ const Navbar = () => {
                     <h1 className="text-[#100A42] font-bold font-[inter] text-base">HelpMeOut</h1>
                 </div>
                 <div className="px-5 py-[10px] gap-10 flex items-center justify-center">
-                    <NavLink to='/features' className='text-[#100A42] font-medium text-base'>Features</NavLink>
-                    <NavLink to='/how-it-works' className='text-[#100A42] font-medium text-base'>How It Works</NavLink>
+                    <NavLink to='/all' className='text-[#100A42] font-medium text-base'>Features</NavLink>
+                    <NavLink to='/home' className='text-[#100A42] font-medium text-base'>How It Works</NavLink>
                 </div>
-                <NavLink to='/features' className='text-[#100A42] font-medium text-base px-10 py-4'>Get Started</NavLink>
+                <NavLink to='/login' className='text-[#100A42] font-medium text-base px-10 py-4'>Get Started</NavLink>
             </div>
         </nav>
     )
